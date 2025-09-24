@@ -1,0 +1,15 @@
+nama_mahasiswa = "Destiana"
+fakultas = "teknik"
+prodi = "informatika"
+umur = "18"
+kelas = "A1_25"
+kalimat = """aku suka Billie eilish"""
+
+print(kalimat)
+
+#input
+nama = input("Masukkan Nama,")
+print = (nama)
+fakultas = input("Masukkan fakultas,")
+print = (fakultas)
+ 
