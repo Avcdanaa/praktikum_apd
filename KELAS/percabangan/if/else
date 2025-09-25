@@ -1,0 +1,58 @@
+# nilai = 70
+
+# if nilai > 75:
+#     print ('Nilai A')
+# elif nilai >65:
+#     print ("Nilai B")
+# else:
+#     print('nilai C')
+
+# suhu = 35
+# if suhu >= 35:
+#     print('panas')
+# if suhu > 30:
+#     print ('sauna')
+# elif suhu >= 20 :
+#     print ('normal')
+# else: 
+#     print ('dingin')
+
+# # input nilai
+# umur = int(input("Masukkan umur Anda: "))
+# # misalnya, umur = 16
+# # Percabangan
+# if umur < 13:
+#     kategori = "Anak-anak"
+# elif umur < 18:
+#     kategori = "Remaja"
+# elif umur < 60:
+#     kategori = "Dewasa"
+# else:
+#     kategori = "Lansia"
+# # Menampilkan umur dan kategori
+# print("Umur:", umur, "Kategori:", kategori)
+
+# nilai = 70
+
+# status = "Lulus" if nilai >= 60 else "Tidak Lulus"
+# print(status)
+
+
+# if tinggibadan: >=145:
+#     print('boleh masuk')
+# else:
+#     print('tidak boleh masuk') 
+
+# bisakah = 'silahkan masuk wahana' if tinggibadan >=145 else 'tidak boleh masuk'
+# print(bisakah)
+
+if  totalbelanja: >=100.000:
+print('mendapatkandiskon 20%')
+
+totalbelanja = 100.000,00
+if totalbelanja >= 100.000,00:
+    print ('mendapatkan diskon 20%')
+if totalbelanja >= 50.000,00:
+    print ('mendapatkan diskon 10%')
+else totalbelanja < 50.000,00:
+    print ('tidak berlaku')
