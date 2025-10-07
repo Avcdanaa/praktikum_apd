@@ -3,7 +3,7 @@ import os
 
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("=== SELAMAT DATANG DI SISTEM BELANJA JUS ===")
+    print("=== SELAMAT DATANG DI TOKO DESTINY ===")
     while True:
         is_member_input = input("Apakah Anda member? (yes/no): ").strip().lower()
         if is_member_input:
