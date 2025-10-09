@@ -46,13 +46,13 @@
 # bisakah = 'silahkan masuk wahana' if tinggibadan >=145 else 'tidak boleh masuk'
 # print(bisakah)
 
-if  totalbelanja: >=100.000:
-print('mendapatkandiskon 20%')
+# if  totalbelanja: >= 100.000:
+# print('mendapatkandiskon 20%')
 
-totalbelanja = 100.000,00
-if totalbelanja >= 100.000,00:
-    print ('mendapatkan diskon 20%')
-if totalbelanja >= 50.000,00:
-    print ('mendapatkan diskon 10%')
-else totalbelanja < 50.000,00:
-    print ('tidak berlaku')
+# totalbelanja = 100.000,00
+# if totalbelanja >= 100.000,00:
+#     print ('mendapatkan diskon 20%')
+# if totalbelanja >= 50.000,00:
+#     print ('mendapatkan diskon 10%')
+# else totalbelanja < 50.000,00:
+#     print ('tidak berlaku')

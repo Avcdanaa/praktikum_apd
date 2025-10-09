@@ -1,0 +1,53 @@
+# praktikum = ['APD',['orsikom','jarkom'],['RPL','basis data','struktur data']]
+
+# print(praktikum[2][0])
+
+# #print praktikum
+# for i in praktikum 
+# print(i)
+
+# praktikum= ['APD','orsikom','jarkom','RPL']
+# praktikum.remove('APD')
+
+# # buang= praktikum.pop()
+# # print(buang)
+# # del praktikum[2]
+# # inputnilai=('logmat' )
+# # praktikum.append(inputnilai)
+# # praktikum[2]="kalkulus"
+# # praktikum.append('basdat')
+# # praktikum.insert(2, 'basdat')
+# print(praktikum)
+
+# praktikum= ['APD','orsikom','jarkom','RPL']
+
+# angka=[1,2,3,4,5,6,7,8,9,10,11]
+# huruf=['a','b','c']
+# kombinasi= angka + huruf
+# print(kombinasi)
+
+# print(tes[3: 10 : 3])
+
+# # list mahasiswa
+# mahasiswa = [
+#     ["Daffa", "Dante", "Santoso"], ["Pernanda", "Triya", "Ahnaf"],['yoga','denny']
+#     ]
+# # perulangan for untuk mendapatkan semua elemen
+# for i in mahasiswa:
+#     for j in i :
+#         print (j)
+#         #[1][2]
+
+# aslab=['daffa','deny']
+# matkul = ('apd','matdis')
+# listmatkul=list(matkul)
+# # print(type(tuple))
+# for i in matkul:
+#     print(i)
+
+# matkul.append('kalkulus')
+# print(matkul)
+
+tugas=('yoga','arduino','scrapping', 'matriks, visualisasi')
+(nama, orsikom ,basisdata ,*manipulasidata )= tugas
+print(manipulasidata)
