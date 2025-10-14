@@ -48,6 +48,6 @@
 # matkul.append('kalkulus')
 # print(matkul)
 
-tugas=('yoga','arduino','scrapping', 'matriks, visualisasi')
-(nama, orsikom ,basisdata ,*manipulasidata )= tugas
-print(manipulasidata)
+# tugas=('yoga','arduino','scrapping', 'matriks, visualisasi')
+# (nama, orsikom ,basisdata ,*manipulasidata )= tugas
+# print(manipulasidata)
