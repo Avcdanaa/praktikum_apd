@@ -129,13 +129,17 @@ while is_running:
                     print(f"{'No':<5} {'Nama':<30} {'Jadwal':<15} {'Kuota':<10} {'Harga':<15} {'Ketersediaan':<15}")
                     print("-" * (5 + 30 + 15 + 10 + 15 + 15 + 5*5))
                     
-                    for i, (nama, data) in enumerate(tempat_wisata.items(), 1):
+                    i = 1
+                    for nama, data in tempat_wisata.items():
                         ketersediaan = 'Tersedia' if data["kuota"] > 0 else 'Penuh'
                         print(f"{i:<5} {nama:<30} {data['jadwal']:<15} {data['kuota']:<10} {'Rp ' + format(data['harga'], ','):<15} {ketersediaan:<15}")
+                        i += 1
                     
                     print("\nDeskripsi Detail:")
-                    for i, (nama, data) in enumerate(tempat_wisata.items(), 1):
+                    i = 1
+                    for nama, data in tempat_wisata.items():
                         print(f"{i}. {nama}: {data['deskripsi']}")
+                        i += 1
                     
                     cari = input("\nCari nama tempat (kosongkan untuk skip): ").strip().lower()
                     if cari:
@@ -163,13 +167,17 @@ while is_running:
                     print(f"{'No':<5} {'Nama':<30} {'Jadwal':<15} {'Kuota':<10} {'Harga':<15} {'Ketersediaan':<15}")
                     print("-" * (5 + 30 + 15 + 10 + 15 + 15 + 5*5))
                     
-                    for i, (nama, data) in enumerate(tempat_wisata.items(), 1):
+                    i = 1
+                    for nama, data in tempat_wisata.items():
                         ketersediaan = 'Tersedia' if data["kuota"] > 0 else 'Penuh'
                         print(f"{i:<5} {nama:<30} {data['jadwal']:<15} {data['kuota']:<10} {'Rp ' + format(data['harga'], ','):<15} {ketersediaan:<15}")
+                        i += 1
                     
                     print("\nDeskripsi Detail:")
-                    for i, (nama, data) in enumerate(tempat_wisata.items(), 1):
+                    i = 1
+                    for nama, data in tempat_wisata.items():
                         print(f"{i}. {nama}: {data['deskripsi']}")
+                        i += 1
                     
                     cari = input("\nCari nama tempat (kosongkan untuk skip): ").strip().lower()
                     if cari:
@@ -184,7 +192,6 @@ while is_running:
                     
                     input("\nTekan Enter untuk kembali...")
                 else:
-                    # Book tiket inline
                     os.system('cls' if os.name == 'nt' else 'clear')
                     print("=== PESAN TIKET WISATA ===")
                     if not tempat_wisata:
@@ -196,10 +203,11 @@ while is_running:
                     print(f"{'No':<5} {'Nama':<30} {'Jadwal':<15} {'Kuota':<10} {'Harga':<15} {'Ketersediaan':<15}")
                     print("-" * (5 + 30 + 15 + 10 + 15 + 15 + 5*5))
                     
-                    tempat_list = list(tempat_wisata.items())
-                    for i, (nama, data) in enumerate(tempat_list, 1):
+                    i = 1
+                    for nama, data in tempat_wisata.items():
                         ketersediaan = 'Tersedia' if data["kuota"] > 0 else 'Penuh'
                         print(f"{i:<5} {nama:<30} {data['jadwal']:<15} {data['kuota']:<10} {'Rp ' + format(data['harga'], ','):<15} {ketersediaan:<15}")
+                        i += 1
                     
                     pilihan = 0
                     while pilihan < 1 or pilihan > len(tempat_wisata):
@@ -209,7 +217,16 @@ while is_running:
                         else:
                             print("Error: Masukkan angka positif yang valid!")
                     
-                    nama_pilih, data_pilih = tempat_list[pilihan - 1]
+                    nama_pilih = None
+                    data_pilih = None
+                    i = 1
+                    for nama, data in tempat_wisata.items():
+                        if i == pilihan:
+                            nama_pilih = nama
+                            data_pilih = data
+                            break
+                        i += 1
+                    
                     if data_pilih["kuota"] <= 0:
                         print("Maaf, kuota untuk tempat ini sudah penuh!")
                         input("Tekan Enter untuk kembali...")
@@ -242,9 +259,10 @@ while is_running:
                         input("Tekan Enter untuk kembali...")
                         continue
                     
-                    tempat_list = list(tempat_wisata.items())
-                    for i, (nama, data) in enumerate(tempat_list, 1):
+                    i = 1
+                    for nama, data in tempat_wisata.items():
                         print(f"{i}. {nama}")
+                    i += 1
                     
                     pilihan = 0
                     while pilihan < 1 or pilihan > len(tempat_wisata):
@@ -254,7 +272,16 @@ while is_running:
                         else:
                             print("Error: Masukkan angka positif yang valid!")
                     
-                    nama_pilih, data_pilih = tempat_list[pilihan - 1]
+                    nama_pilih = None
+                    data_pilih = None
+                    i = 1
+                    for nama, data in tempat_wisata.items():
+                        if i == pilihan:
+                            nama_pilih = nama
+                            data_pilih = data
+                            break
+                        i += 1
+                    
                     print(f"\nData saat ini: {nama_pilih} - {data_pilih}")
                     
                     print("1. Ubah kuota pengunjung")
@@ -315,9 +342,10 @@ while is_running:
                     input("Tekan Enter untuk kembali...")
                     continue
                 
-                tempat_list = list(tempat_wisata.items())
-                for i, (nama, data) in enumerate(tempat_list, 1):
+                i = 1
+                for nama, data in tempat_wisata.items():
                     print(f"{i}. {nama}")
+                    i += 1
                 
                 pilihan = 0
                 while pilihan < 1 or pilihan > len(tempat_wisata):
@@ -327,7 +355,14 @@ while is_running:
                     else:
                         print("Error: Masukkan angka positif yang valid!")
                 
-                nama_hapus, _ = tempat_list[pilihan - 1]
+                nama_hapus = None
+                i = 1
+                for nama, data in tempat_wisata.items():
+                    if i == pilihan:
+                        nama_hapus = nama
+                        break
+                    i += 1
+                
                 confirm = input(f"Yakin hapus '{nama_hapus}'? (y/n): ").strip().lower()
                 if confirm == 'y':
                     del tempat_wisata[nama_hapus]
