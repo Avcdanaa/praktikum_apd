@@ -1,12 +1,14 @@
 import sys
-import time
 from login import login, register, clear_screen
 from sistem import admin, user
 
 def main():
     while True:
         clear_screen()
-        print("-" * 11, "Main Menu", "-" * 11, "\n1. Login\n2. Register\n0. Keluar")
+        print("-" * 11, "Main Menu", "-" * 11)
+        print("1. Login")
+        print("2. Register")
+        print("0. Keluar")
         
         pilih = input("\nPilih Menu: ")
         
@@ -21,10 +23,7 @@ def main():
             register()
         elif pilih == "0":
             clear_screen()
-            kalimat = "Terimakasih sudah menggunakan Sistem kami:)\n\tHave a nice day!"
-            for char in kalimat:
-                sys.stdout.write(char)
-                time.sleep(0.03)
+            print("Terimakasih sudah menggunakan Sistem kami:)\n\tHave a nice day!")
             break
         else:
             print("Pilihan tidak valid!")
