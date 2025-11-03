@@ -1,5 +1,5 @@
-from data import tempat_wisata, cari_tempat_wisata, hitung_total_harga  # Import produk dan fungsi dari data
-from login import clear_screen  # Import clear dari login
+from data import tempat_wisata, cari_tempat_wisata, hitung_total_harga  
+from login import clear_screen 
 from prettytable import PrettyTable
 
 def tampilkan_daftar_wisata():
@@ -301,7 +301,6 @@ def user(current_user):
                 except ValueError:
                     print("Error: Masukkan angka positif yang valid!")
             
-            # Lengkapi pemesanan: kurangi kuota, hitung harga, print hasil
             tempat_wisata[nama_pilih]["kuota"] -= jumlah_tiket
             total_harga = hitung_total_harga(jumlah_tiket, data_pilih["harga"])
             print(f"Pemesanan berhasil! Anda memesan {jumlah_tiket} tiket untuk {nama_pilih}.")
